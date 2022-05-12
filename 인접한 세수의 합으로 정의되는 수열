@@ -1,0 +1,32 @@
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+
+
+int Tcci(int n)
+{
+
+	if (n <= 3)
+	{
+		return (n - 1);
+	}
+
+	return (Tcci(n - 1) + Tcci(n - 2) + Tcci(n - 3));
+}
+
+int main(){
+
+
+	int n;
+	printf("몇 번째 숫자?");
+	scanf("%d", &n);
+	printf("\n");
+
+	printf("%d", Tcci(n));
+
+	return 0;
+	
+}
+
+
